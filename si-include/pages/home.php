@@ -56,7 +56,7 @@ global $siteurl;
     		
     		<footer>
     			<hr />
-    			<p>Copyleft &copy; Abreto 2012. <a href="https://github.com/Abreto/ShenImages" target="_blank">源</a>.</p>
+    			<p>Copyleft &copy; 2012 Abreto. <a href="https://github.com/Abreto/ShenImages" target="_blank">源</a>.</p>
     		</footer>
     	</div>
 
@@ -68,7 +68,7 @@ global $siteurl;
 	    });
 	    $("#up").click(function(){
 		    $("#upform").submit();
-	    })
+	    });
 		</script>
 	</body>
 </html>
