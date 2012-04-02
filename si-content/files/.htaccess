@@ -1,0 +1,6 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+deny from all
+</Files>
+Options -Indexes
+Order Deny,Allow
+Deny from all
