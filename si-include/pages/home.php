@@ -1,5 +1,5 @@
 <?php
-header('Content-Type: text/html, charset=utf-8');
+header('Content-Type: text/html; charset=utf-8');
 
 global $siteurl;
 ?>
@@ -41,7 +41,11 @@ global $siteurl;
     			<p>您可以上传GIF/JPEG/PNG格式的图片, 请自觉.</p>
     		</header>
     		
-    		<section class="well">
+    		<section id="result">
+    		<iframe id="upresult" name="upresult" style="border:none;display:none;"></iframe>
+    		</section>
+    		
+    		<section>
     			<p>在此处上传文件:</p>
     			<form id="upform" action="<?php echo $siteurl;?>/upfile" method="post" enctype="multipart/form-data">
     				<div id="upaera">
@@ -63,12 +67,12 @@ global $siteurl;
 		<script type="text/javascript" src="<?php echo $siteurl; ?>/si-include/jQuery/jquery-1.7.2.min.js"></script>
 		<script type="text/javascript" src="<?php echo $siteurl; ?>/si-include/bootstrap/js/bootstrap.min.js"></script>
 		<script type="text/javascript">
-		$("#addone").click(function(){
-	        $("#upaera").append('<br /><input type="file" name="pics[]" />');
-	    });
-	    $("#up").click(function(){
-		    $("#upform").submit();
-	    });
+$("#addone").click(function(){
+	$("#upaera").append('<br /><input type="file" name="pics[]" />');
+});
+$("#up").click(function(){
+	$("#upform").submit();
+});
 		</script>
 	</body>
 </html>
