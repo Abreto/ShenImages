@@ -97,7 +97,7 @@ while(isset($_FILES["pics"]["name"][++$i]))
     				echo '	<label class="control-label">图片外链</label>';
     				echo '	<div class="controls">';
     				echo '	<a href="'. $p['uri'] . '/.png" target="_blank" class="btn">PNG</a>';
-    				echo '	<a href="'. $p['uri'] . '/.jpeg" target="_blank" class="btn">JPEG</a>';
+    				echo '	<a href="'. $p['uri'] . '/.jpg" target="_blank" class="btn">JPEG</a>';
     				echo '	<a href="'. $p['uri'] . '/.gif" target="_blank" class="btn">GIF</a>';
     				echo '	</div>';
     				echo '</div>';
