@@ -28,7 +28,7 @@ while(isset($_FILES["pics"]["name"][++$i]))
 	$pics[$i]['name'] = md5(file_get_contents($_FILES['pics']['tmp_name'][$i]));	// 文件名
 	$pics[$i]['show'] = $pics[$i]['name'] . '-' . $pics[$i]['tn'];	// 显示的文件名
 	$pics[$i]['path'] = $SI['UPLOAD_DIR'] . $pics[$i]['name'];
-	$pics[$i]['uri'] = $siteurl . '/s' . $SI['BASE_URI'] . '/' . $pics[$i]['show'];
+	$pics[$i]['uri'] = $siteurl . '/s/' . str_replace('/', '|', $SI['BASE_URI'] . '/' . $pics[$i]['show'] );
 	
 	if( file_exists($pics[$i]['path']) )	// 如果文件存在
 	{
@@ -97,7 +97,7 @@ while(isset($_FILES["pics"]["name"][++$i]))
     				echo '	<label class="control-label">图片外链</label>';
     				echo '	<div class="controls">';
     				echo '	<a href="'. $p['uri'] . '/.png" target="_blank" class="btn">PNG</a>';
-    				echo '	<a href="'. $p['uri'] . '/.jpg" target="_blank" class="btn">JPEG</a>';
+    				echo '	<a href="'. $p['uri'] . '/.jpeg" target="_blank" class="btn">JPEG</a>';
     				echo '	<a href="'. $p['uri'] . '/.gif" target="_blank" class="btn">GIF</a>';
     				echo '	</div>';
     				echo '</div>';

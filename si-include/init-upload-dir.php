@@ -9,7 +9,7 @@ $toyear = date("Y");
 $tomonthnum = date("m");
 $today = date("d");
 
-$SI['BASE_URI'] = "/{$toyear}/{$tomonthnum}/{$today}";
+$SI['BASE_URI'] = "{$toyear}/{$tomonthnum}/{$today}";
 $SI['UPLOAD_DIR'] = SICON . '/' . BASE_UPLOAD_DIR . "{$toyear}/{$tomonthnum}/{$today}/";
 
 if( !file_exists($SI['UPLOAD_DIR']) )
